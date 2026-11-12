@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR"
+  ><head
+    ><meta charset="UTF-8" /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover" /><title
+      >DevLife · Aprenda. Trabalhe. Evolua.</title
+    ><link rel="icon" type="image/svg+xml" href="./favicon.svg" /><link
+      rel="stylesheet"
+      href="./css/style.css"
+  /></head>
+  <body>
+    <section id="auth" class="auth-shell">
+      <div class="intro"
+        ><a class="brand" href="./">✦ devlife<span>RPG</span></a
+        ><div class="eyebrow">SEU PRÓXIMO NÍVEL COMEÇA AQUI</div
+        ><h1>Uma nova vida.<br />Uma linha de<br /><em>código por vez.</em></h1
+        ><p
+          >Explore DevCity, aprenda programação e conquiste seu primeiro emprego. Seu código
+          transforma o mundo.</p
+        ><div class="intro-tags"
+          ><span>⌨ Programação real</span><span>✦ Mundo 2D</span><span>↗ Sua carreira</span></div
+        ><div class="scene-card"
+          ><span>🏠</span><span>🌳</span><span>🏫</span><span>🌲</span><span>🏢</span
+          ><div>DEV CITY <b>● ONLINE</b></div></div
+        ></div
+      >
+      <form id="authForm" class="auth-card"
+        ><div class="eyebrow">BEM-VINDO À DEV CITY</div><h2 id="authTitle">Sua jornada espera.</h2
+        ><p id="authSubtitle">Entre para continuar construindo seu futuro.</p
+        ><div class="tabs"
+          ><button type="button" id="loginTab" class="active">Entrar</button
+          ><button type="button" id="registerTab">Criar conta</button></div
+        ><label id="nameField" hidden
+          >Nome do personagem<input
+            id="authName"
+            minlength="2"
+            maxlength="24"
+            placeholder="Como vamos chamar você?"
+            autocomplete="nickname" /></label
+        ><label
+          >E-mail<input
+            id="email"
+            type="email"
+            required
+            placeholder="voce@exemplo.com"
+            autocomplete="email" /></label
+        ><label
+          >Senha<input
+            id="password"
+            type="password"
+            required
+            minlength="8"
+            maxlength="128"
+            placeholder="Pelo menos 8 caracteres"
+            autocomplete="current-password" /></label
+        ><label id="confirmField" hidden
+          >Confirmar senha<input
+            id="confirmPassword"
+            type="password"
+            minlength="8"
+            autocomplete="new-password" /></label
+        ><p id="authError" class="error" role="alert"></p
+        ><button class="primary" id="authSubmit">Entrar em DevCity →</button
+        ><div class="social-logins" id="socialLogins" aria-label="Outras formas de entrar"></div
+        ></form
+      >
+    </section>
+    <main id="game" hidden
+      ><header
+        ><a class="brand" href="./">✦ devlife<span>RPG</span></a
+        ><span class="header-city">DEV CITY <i></i> SUA JORNADA</span
+        ><div class="header-actions"
+          ><div id="audioControls" class="audio-controls" data-track="off">
+            <button id="audioToggle" class="quiet" aria-pressed="false" title="Ativar o som do jogo"
+              >♪ Música</button
+            >
+            <input
+              id="audioVolume"
+              type="range"
+              min="0"
+              max="100"
+              value="28"
+              aria-label="Volume do jogo"
+            /> </div
+          ><button id="logout" class="quiet">Sair ↗</button></div
+        ></header
+      ><div class="game-layout"
+        ><aside class="profile"
+          ><div class="eyebrow">SEU PERSONAGEM</div
+          ><div class="avatar" id="avatar"
+            ><canvas
+              id="playerPortrait"
+              width="128"
+              height="128"
+              aria-label="Retrato do personagem"
+            ></canvas></div
+          ><h2 id="playerName"></h2><span class="badge" id="jobName"></span
+          ><div class="stats player-level"
+            ><div><small>NÍVEL</small><b id="level"></b></div></div
+          ><label class="xp-label" for="xpBar">XP total <span id="xpText"></span></label
+          ><progress id="xpBar" max="150" aria-describedby="xpNext"></progress
+          ><small id="xpNext" class="xp-next"></small><h3>Economia</h3><div id="regionalWallets" class="player-wallets" aria-label="Saldos"><div class="wallet-coins"><span aria-hidden="true">🪙</span><b id="money" aria-label="Moedas"></b></div><div class="wallet-reais"><span aria-hidden="true"><svg class="wallet-note" viewBox="0 0 28 20" focusable="false" aria-hidden="true"><rect x="1" y="2" width="26" height="16" rx="3" fill="currentColor"/><path d="M5 6h18v8H5z" fill="none" stroke="#102631" stroke-width="1.2" opacity=".5"/><ellipse cx="14" cy="10" rx="3.5" ry="4.5" fill="#102631" opacity=".65"/><path d="M7 10h2m10 0h2" stroke="#102631" stroke-width="1.5" stroke-linecap="round"/></svg></span><b id="brlBalance" aria-label="Saldo em reais"></b></div><div class="wallet-dollars"><span aria-hidden="true"><svg class="wallet-note" viewBox="0 0 28 20" focusable="false" aria-hidden="true"><rect x="1" y="2" width="26" height="16" rx="3" fill="currentColor"/><path d="M5 6h18v8H5z" fill="none" stroke="#102631" stroke-width="1.2" opacity=".5"/><ellipse cx="14" cy="10" rx="3.5" ry="4.5" fill="#102631" opacity=".65"/><path d="M7 10h2m10 0h2" stroke="#102631" stroke-width="1.5" stroke-linecap="round"/></svg></span><b id="usdBalance" aria-label="Saldo em dólares"></b></div></div><h3>Conhecimento</h3><div id="skills"></div
+          ><div class="streak">🔥 <b id="streak"></b> dia(s) de estudo</div
+          ><button id="editCharacter" class="secondary">Personalizar personagem</button
+          ><button id="achievementsBtn" class="quiet">🏆 Minhas conquistas</button
+          ><button
+            id="sidebarTrophies"
+            class="trophy-strip"
+            aria-label="Abrir mural de troféus"
+          ></button
+          ><div class="tip"><b>Seu próximo passo</b><p id="nextStep"></p></div></aside
+        ><section class="world"
+          ><div class="world-heading"
+            ><div
+              ><div class="eyebrow">EXPLORE. APRENDA. EVOLUA.</div
+              ><h1>Bem-vindo a DevCity<span>✦</span></h1></div
+            ><div id="worldClock" class="world-clock" aria-label="Ciclo de dia e noite"
+              ><span id="periodIcon" aria-hidden="true">☀</span
+              ><div
+                ><b id="periodName">Dia</b
+                ><small id="periodCountdown">Anoitece em 06:00</small></div
+              ></div
+            ></div
+          ><div class="canvas-wrap"
+            ><canvas
+              id="map"
+              width="960"
+              height="640"
+              tabindex="0"
+              aria-label="Mapa de DevCity. Use WASD ou setas para andar e E para interagir. Entre pelas portas e explore os interiores."
+            ></canvas
+            ><button id="mapView" class="map-view" aria-pressed="false">⊞ Ver mapa inteiro</button
+            ><button id="interactBtn" class="map-interact" aria-label="Interagir no mapa"
+              >E · Interagir</button
+            ><div id="sleepBanner" class="sleep-banner" role="status" hidden></div
+            ><div id="interaction">WASD / setas para andar · E para interagir</div></div
+          ><div class="world-footer"></div
+          ></section
+        ></div
+      ></main
+    >
+    <dialog id="panel"
+      ><div class="dialog-head"
+        ><span id="panelTag" class="eyebrow"></span
+        ><button id="closePanel" class="quiet" aria-label="Fechar">✕</button></div
+      ><div id="panelBody"></div
+      ><div id="dialogToast" class="dialog-toast" role="status"></div></dialog
+    ><dialog
+      id="achievementCelebration"
+      class="achievement-celebration"
+      aria-labelledby="achievementTitle"
+      ><button id="closeAchievement" class="celebration-close" aria-label="Fechar celebração"
+        >✕</button
+      ><div class="celebration-rays" aria-hidden="true"></div
+      ><div class="celebration-sparkles" aria-hidden="true">✦ · ✧ · ✦</div
+      ><div class="eyebrow">NOVA CONQUISTA DESBLOQUEADA</div><img id="achievementArt" alt="" /><h2
+        id="achievementTitle"
+      ></h2
+      ><p id="achievementDescription"></p><small id="achievementCount"></small
+      ><button id="viewAchievements" class="primary">Ver meu mural de troféus →</button></dialog
+    ><div id="toast" role="status"></div
+    ><audio id="gameMusic" src="./audio/devcity-fim-de-tarde.wav" preload="none" loop hidden></audio>
+    <audio id="bedSound" src="./audio/descanso.wav" preload="none" loop hidden></audio>
+    <script type="module" src="./app.js"></script> </body
+></html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title"><title id="title">Rei dos Projetos</title>
+<defs><linearGradient id="gold" x2="1" y2="1"><stop stop-color="#fff3b0"/><stop offset=".45" stop-color="#e9bd55"/><stop offset="1" stop-color="#a66b26"/></linearGradient><radialGradient id="halo"><stop stop-color="#d8b4fe" stop-opacity=".38"/><stop offset="1" stop-color="#b38bdf" stop-opacity="0"/></radialGradient></defs>
+<circle cx="100" cy="100" r="98" fill="url(#halo)"/><circle cx="100" cy="99" r="80" fill="none" stroke="#f0ce79" stroke-dasharray="2 9" opacity=".55"/>
+<path d="m34 59 5-10 5 10-5 10zm124 65 4-9 4 9-4 9z" fill="#f9df93"/>
+<ellipse cx="100" cy="182" rx="47" ry="7" fill="#07151c" opacity=".45"/>
+<path d="M67 58H43c-1 27 10 42 31 43m59-43h24c1 27-10 42-31 43" fill="none" stroke="#d8ae59" stroke-width="9"/>
+<path d="M65 51h70l-5 40c-2 19-15 31-30 31S72 110 70 91z" fill="url(#gold)" stroke="#9e692d" stroke-width="3"/>
+<path d="M68 24 83 38 100 17l17 21 15-14-5 26H73z" fill="url(#gold)" stroke="#98662b" stroke-width="2"/><circle cx="100" cy="35" r="4" fill="#b68df0"/>
+<circle cx="100" cy="83" r="23" fill="#50396c" stroke="#f9df93" stroke-width="2"/><path d="m92 73-10 10 10 10m16-20 10 10-10 10m-6-23-5 26" fill="none" stroke="#fbe7a0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94 121h12v22l18 9H76l18-9z" fill="url(#gold)" stroke="#98662b" stroke-width="2"/>
+<rect x="65" y="151" width="70" height="9" rx="3" fill="#e8c36b"/><rect x="52" y="159" width="96" height="25" rx="5" fill="#302840" stroke="#c4a264" stroke-width="2"/>
+<text x="100" y="169" text-anchor="middle" fill="#f7dea0" font-family="Segoe UI,sans-serif" font-size="6.5" font-weight="700">REI DOS</text><text x="100" y="179" text-anchor="middle" fill="#f7dea0" font-family="Segoe UI,sans-serif" font-size="8" font-weight="700">PROJETOS</text></svg>

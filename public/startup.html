@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciando DevLife</title>
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./startup.css?v=0.1.13">
+  <script defer src="./startup.js?v=0.1.13"></script>
+</head>
+<body>
+  <main>
+    <section class="startup-panel">
+      <div class="mark" aria-hidden="true">&lt;/&gt;</div>
+      <h1>Dev<span>Life</span></h1>
+      <div class="startup-status">
+        <p id="status" role="status">Procurando atualização…</p>
+        <p id="version" hidden></p>
+        <div class="progress" aria-hidden="true"><div></div></div>
+        <a id="enter" href="./?entrar=1" hidden>Ir para o login <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="showcase" aria-label="Prévias do DevLife">
+      <figure class="preview">
+        <img id="preview-image" src="./startup-previews/cidade.png" alt="Ruas e prédios da cidade no DevLife" width="1440" height="1000">
+        <figcaption><strong id="preview-caption">Explore a cidade</strong><span id="preview-detail">Descubra novas regiões e encontre outros personagens.</span></figcaption>
+      </figure>
+      <div class="preview-controls" aria-label="Escolher prévia">
+        <button type="button" aria-pressed="true" data-preview="0">Cidade</button>
+        <button type="button" aria-pressed="false" data-preview="1">Escola</button>
+        <button type="button" aria-pressed="false" data-preview="2">Veículos</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
